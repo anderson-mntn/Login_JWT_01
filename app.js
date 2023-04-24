@@ -11,6 +11,6 @@ mongoose.connect(process.env.MONGO_CONNECTION_URL,
     }    
 )
 
-app.use('/user', userRouter); // .use() serve para qndtipo de req nao for especifiado.
+app.use('/user', express.json(), userRouter); // .use() serve para qndtipo de req nao for especifiado.
 
 app.listen(process.env.PORT, ()=>{console.log("Server Running.");})
