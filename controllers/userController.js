@@ -32,8 +32,8 @@ const userController = {
         if(!userAndPasswordMatch) return res.status(404).send("E-mail or password do not matches.");
         // Se chegou aqui é pq logou.
 
-        // Então depois de logado criamos o token
-        const token = jwt.sign({_id: selectedUser._id}, process.env.TOKEN_SECRET)
+        // Então depois de logado criamos o token - também propriedade boolean "admin"
+        const token = jwt.sign({_id: selectedUser._id, admin: selectedUser.admin}, process.env.TOKEN_SECRET)
 
         // enviando token através do header da res (key, value)
         res.header('authorization-token', token);
