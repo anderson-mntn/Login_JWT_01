@@ -36,7 +36,7 @@ const userController = {
         const token = jwt.sign({_id: selectedUser._id}, process.env.TOKEN_SECRET)
 
         // enviando token através do header da res (key, value)
-        res.header('authoriztion-token', token);
+        res.header('authorization-token', token);
 
 
         res.send("User Logged in, welcome back " + selectedUser.name + "! ");
