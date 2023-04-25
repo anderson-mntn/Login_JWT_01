@@ -1,14 +1,11 @@
 const jwt = require('jsonwebtoken');
 
-
 const user = {
     id: '4050',
     name: 'Joao Almeida',
     email: 'joaoalmeida@gmail.com',
     password: '321321',
 }
-
-
 
 const secret = "9g8t4"
 
@@ -34,4 +31,4 @@ function verifyToken(token){
 //createToken();
 
 //Deve ser passado uma string - jwt.verify
-verifyToken('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNDA1MCIsImVtYWlsIjoiam9hb2FsbWVpZGFAZ21haWwuY29tIiwiaWF0IjoxNjgyNDM1MTA5LCJleHAiOjE2ODI0MzUxNTl9.H3ikHNgJDesYGzgUiTMy9NplXxyXFYghwiODG08tuxk')
+//verifyToken('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNDA1MCIsImVtYWlsIjoiam9hb2FsbWVpZGFAZ21haWwuY29tIiwiaWF0IjoxNjgyNDM1MTA5LCJleHAiOjE2ODI0MzUxNTl9.H3ikHNgJDesYGzgUiTMy9NplXxyXFYghwiODG08tuxk')
