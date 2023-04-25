@@ -1,4 +1,5 @@
-const User = require('../models/userModel')
+const User = require('../models/userModel');
+const bcrypt = require('bcryptjs');
 
 const userController = {
     register: async function (req, res){
@@ -6,7 +7,7 @@ const userController = {
         const user = new User({
             name: req.body.name,
             email: req.body.email,
-            password: req.body.password,
+            password: bcrypt.hashSync(req.body.password),
         })
 
         try{
