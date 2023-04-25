@@ -4,6 +4,9 @@ const bcrypt = require('bcryptjs');
 const userController = {
     register: async function (req, res){
 
+        const checkUniqueEmail = await User.find({email: req.body.email});
+        if (checkUniqueEmail) return res.status(404).send("E-mail already in use")
+
         const user = new User({
             name: req.body.name,
             email: req.body.email,
